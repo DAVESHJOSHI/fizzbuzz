@@ -15,6 +15,7 @@ app.post('/fizzbuzz', (req, res) => {
         const results = processArray(arr);
         res.json(results);
     } catch (error) {
+        console.log('error in fizzbuzz', error)
         res.status(400).send(error.message);
     }
 });
